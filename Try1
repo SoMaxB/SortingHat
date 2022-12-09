@@ -1,0 +1,58 @@
+gryffindor = 0
+ravenclaw = 0
+hufflepuff = 0
+slytherin = 0
+
+#name = [gryffindor, ravenclaw, hufflepuff, slytherin]
+
+q1 = int(input("Do you like Dawn(1) or Dusk(2)?, choose a number: "))
+
+if q1 == 1:
+    gryffindor += 1
+    ravenclaw += 1
+elif q1 == 2:
+    hufflepuff += 1
+    slytherin += 1
+else:
+    print("Wrong input")
+
+
+q2 = int(input("When I’m dead, I want people to remember me as (choose a numer):"))
+The_Good = 1
+The_Great = 2
+The_Wise = 3
+The_Bold = 4
+
+if q2 == 1:
+    hufflepuff += 1
+elif q2 == 2:
+    slytherin += 1
+elif q2 == 3:
+    ravenclaw += 1
+elif q2 == 4:
+    gryffindor += 1
+else:
+    print("Wrong input")
+
+q3 = int(input("Which kind of instrument most pleases your ear?(Choose a number): "))
+The_violin = 1
+The_trumpet = 2
+The_piano = 3
+The_drum = 4
+
+if q3 == 1:
+    slytherin += 1
+elif q3 == 2:
+    hufflepuff += 1
+elif q3 == 3:
+    ravenclaw += 1
+elif q3 == 4:
+    gryffindor += 1
+else:
+    print("Wrong input")
+
+
+print("Gryffindor: ",int(gryffindor), "  Slytherin: ",int(slytherin), "  Hufflepuff: ",int(hufflepuff), "  Ravenclaw: ",int(ravenclaw))
+
+
+
