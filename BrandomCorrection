@@ -1,0 +1,43 @@
+# I'd start a new line is there's more than 2 key:value pairs.
+total_points = {
+    "Gryffindor": 0,
+    "Hufflepuff": 0,
+    "Ravenclaw": 0,
+    "Slytherin": 0
+}
+
+# Put questions before the answers; place numbers next to each answer.
+Q1 = input("Do you like? (1) Dawn or (2) Dusk?: ")
+Q2 = input("When I'm dead, I want people to remember me as: (1) The Good, (2) The Great, (3) The Wise, (4) The Bold?: ")
+Q3 = input("Which kind of instrument most pleases your ear?: (1) The violin, (2) The trumpet, (3) The piano, (4) The drum?: ")
+
+# Use the numbers for keys instead of the actual answers.
+answerQ1 = {
+    "1": {"Gryffindor": 1, "Ravenclaw": 1},
+    "2": {"Hufflepuff": 1, "Slytherin": 1}
+}
+
+answerQ2 = {
+    "1": {"Hufflepuff": 2},
+    "2":{"Slytherin": 2},
+    "3":{"Ravenclaw": 2},
+    "4":{"Gryffindor": 2}
+}
+
+answerQ3 = {
+    "1": {"Slytherin": 4},
+    "2":{"Hufflepuff": 4},
+    "3":{"Ravenclaw": 4},
+    "4":{"Gryffindor": 4}
+}
+
+# No need for the extra parameter in .get()
+total_points.update(answerQ1.get(Q1))
+total_points.update(answerQ2.get(Q2))
+total_points.update(answerQ3.get(Q3))
+
+print(total_points)
+
+winner = max(total_points, key=lambda x: total_points[x])
+
+print(f"The winner is: {winner} with {total_points[winner]} points.")
