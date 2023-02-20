@@ -1,0 +1,17 @@
+total_points = {"Gryffindor": 0, "Hufflepuff": 0, "Ravenclaw": 0, "Slytherin": 0}
+
+answerQ1 = {"Dawn": {"Gryffindor": 1, "Ravenclaw": 1}, "Dusk": {"Hufflepuff": 1, "Slytherin": 1}}
+answerQ2 = {"The Good": {"Hufflepuff": 1}, "The Great":{"Slytherin": 1}, "The Wise":{"Ravenclaw": 1}, "The Bold":{"Gryffindor": 1}}
+answerQ3 = {"The violin": {"Slytherin": 1}, "The trumpet":{"Hufflepuff": 1}, "The piano":{"Ravenclaw": 1}, "The drum":{"Gryffindor": 1}}
+
+Q1 = input("Do you like Dawn or Dusk?: ")
+Q2 = input("When I’m dead, I want people to remember me as: The Good, The Great, The Wise, The Bold?: ")
+Q3 = input("Which kind of instrument most pleases your ear?: The violin, The trumpet, The piano, The drum?: ")
+
+total_points.update(answerQ1.get(Q1, {}))
+total_points.update(answerQ2.get(Q2, {}))
+total_points.update(answerQ3.get(Q3, {}))
+
+winner = max(total_points, key=lambda x: total_points[x])
+
+print(f"The winner is: {winner} with {total_points[winner]} points.")
