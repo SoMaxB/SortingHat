@@ -1,0 +1,81 @@
+gryffindor = 0
+ravenclaw = 0
+hufflepuff = 0
+slytherin = 0
+
+print("#################")
+print("###  Welcome  ###")
+print("###  I'm the  ###")
+print("## Sorting Hat ##")
+print("#################")
+
+
+while True:
+
+    q1 = int(input("Do you like Dawn or Dusk? Please choose 1 for Dawn or 2 for Dusk.\n"))
+
+    match q1:
+        case 1:
+            gryffindor += 1
+            ravenclaw += 1
+            print("You have chosen Dusk.")
+            break
+        case 2:
+            hufflepuff += 1
+            slytherin += 1
+            print("You have chosen Dawn.")
+            break
+        case _:
+            print("Wrong input, please, choose Dusk or Dawn.")
+
+while True:
+
+    q2 = int(input("When I'm dead, I want people to remember me as:\n1 - The Good\n2 - The Great\n3 - The Wise\n4 - The Bold\nPlease choose a number between 1 and 4.\n"))
+
+    match q2:
+        case 1:
+            hufflepuff += 2
+            break
+        case 2:
+            slytherin += 2
+            break
+        case 3:
+            ravenclaw += 2
+            break
+        case 4:
+            gryffindor += 2
+            break
+        case _:
+            print("Wrong input, please select 1, 2, 3 or 4\n")
+
+
+while True:
+
+    q3 = int(input("Which kind of instrument most pleases your ear?\n1 - The violin\n2 - The trumpet\n3 - The piano\n4 - The drum\n"))
+
+    match q3:
+        case 1:
+            slytherin += 4
+            break
+        case 2:
+            hufflepuff += 4
+            break
+        case 3:
+            ravenclaw += 4
+            break
+        case 4:
+            gryffindor += 4
+            break
+        case _:
+            print("Wrong input, please select 1, 2, 3 or 4\n")
+
+
+if gryffindor >= ravenclaw and gryffindor >= hufflepuff and gryffindor >= slytherin:
+    print('🦁 Gryffindor!')
+elif ravenclaw >= hufflepuff and ravenclaw >= slytherin:
+    print('🦅 Ravenclaw!')
+elif hufflepuff >= slytherin:
+    print('🦡 Hufflepuff!')
+else:
+    print('🐍 Slytherin!')
+
